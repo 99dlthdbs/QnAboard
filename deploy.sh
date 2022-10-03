@@ -21,6 +21,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
 
 # https://<USERNAME>.github.io/<REPO> 에 배포
-git push -f git@github.com:oxopolitics-internship-for-zerobase/QnAboard.git main:gh-pages
+git push -f git@github.com:99dlthdbs/QnAboard.git main:gh-pages
 
 cd -

@@ -1,12 +1,16 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+const ASSET_URL = process.env.ASSET_URL || '';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/QnAboard.github.io/',
+  base: '/QnAboard/',
   plugins: [react()],
-  build: {
-    chunkSizeWarningLimit: 1000,
-    assetsInlineLimit: 0,
-  },
+  rewrites: [
+    {
+      source: '**',
+      destination: '/index.html',
+      base: `${ASSET_URL}/dist/`,
+    },
+  ],
 });
